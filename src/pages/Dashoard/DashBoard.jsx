@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Outlet } from 'react-router-dom';
+import Sidebar from './Sidebar';
 
 const Dashboard = () => {
     const [user, setUser] = useState(null);
@@ -8,7 +9,7 @@ const Dashboard = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
 
-    console.log(user)
+    // console.log(user)
     useEffect(() => {
         const fetchDashboardData = async () => {
             try {
@@ -41,12 +42,13 @@ const Dashboard = () => {
     }
 
     return (
-        <div className="container mx-auto p-4">
+        <div className=" p-4">
             <h1 className="text-2xl font-bold mb-4">Welcome, {user.name}</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="p-4 bg-white rounded-lg shadow-md">
                     <h2 className="text-xl font-semibold mb-2">Account Information</h2>
                     <p>Email: {user.email}</p>
+                    <p>Role: {user.role} </p>
                     <p>Mobile Number: {user.mobileNumber}</p>
                     <p>Account Balance: {user.balance} Taka</p>
                 </div>
@@ -62,9 +64,10 @@ const Dashboard = () => {
                         ))}
                     </ul>
                 </div>
-                <div className="flex-1 p-8 ">
-                    <Outlet></Outlet>
-                </div>
+            </div> */}
+            <Sidebar></Sidebar>
+            <div className="flex-1 ">
+                <Outlet></Outlet>
             </div>
         </div>
     );

@@ -37,9 +37,13 @@ const Register = () => {
   return (
     <form onSubmit={onSubmit} className='lg:py-28'>
       <input type="text" name="name" value={name} onChange={onChange} placeholder="Name" required />
+
       <input type="password" name="pin" value={pin} onChange={onChange} placeholder="5-digit PIN" required />
+
       <input type="text" name="mobileNumber" value={mobileNumber} onChange={onChange} placeholder="Mobile Number" required />
+
       <input type="email" name="email" value={email} onChange={onChange} placeholder="Email" required />
+      
       <button type="submit">Register</button>
     </form>
   );

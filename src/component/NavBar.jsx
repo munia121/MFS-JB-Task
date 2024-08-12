@@ -8,7 +8,8 @@ const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false)
     const { token, logout, user } = useAuth()
 
-console.log(user)
+
+
 
     const handleLogout = () => {
         logout()

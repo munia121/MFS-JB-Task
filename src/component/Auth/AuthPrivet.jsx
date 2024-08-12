@@ -19,7 +19,7 @@ export const AuthPrivet = ({children}) => {
 
 
    const [user, setUSer] = useState(null)
-   console.log(user)
+//    console.log(user)
 
    useEffect(() =>{
 
